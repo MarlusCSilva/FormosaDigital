@@ -24,6 +24,13 @@ class NoticiasController extends Controller
         return view('home', compact('noticias'));
     }
 
+    public function search(Request $request){
+        $query = $request->input('query');
+        $noticias = Noticia::search($query)->post();
+
+        return view('search-results', compact('noticas'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */

@@ -6,9 +6,11 @@ use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Laravel\Scout\Searchable;
 
 class Noticia extends Model
 {
+    use Searchable;
     use HasFactory;
 
     protected $fillable = [
@@ -39,4 +41,13 @@ class Noticia extends Model
         }
 
     }
+
+    public function toSearchchableArray(){
+        return [
+            'id'=> $this->id,
+            'titulo'=> $this->titulo,
+            'descricao'=> $this->descricao,
+        ];
+    }
 }
+
