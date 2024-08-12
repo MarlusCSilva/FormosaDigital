@@ -8,13 +8,13 @@
     <div class="container">
         <h1>Criar Noticia</h1>
         @if($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
+        <div class="alert alert-danger">
+            <ul>
+                @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
         @endif
         <form action="{{ route('noticias.store') }}" method="post" enctype="multipart/form-data">
             @csrf
@@ -30,7 +30,7 @@
                 <label for="url">Arquivo</label>
                 <input type="file" class="form-control" name="arquivo" id="arquivo">
             </div>
-            <button type="submit" class="btn btn-primary">Salvar</button>
+            <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
         </form>
     </div>
 </x-app-layout>

@@ -36,7 +36,7 @@
         <a href="{{ asset($noticia->arquivo) }}" target="_blank">Ver arquivo atual</a>
         @endif
     </div>
-    <button type="submit" class="btn btn-primary">Salvar</button>
+    <button type="submit" class="btn btn-info">Salvar</button>
 </form>
 </div>
 </x-app-layout>

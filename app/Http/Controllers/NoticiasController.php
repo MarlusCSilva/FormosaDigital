@@ -47,7 +47,7 @@ class NoticiasController extends Controller
         $request->validate([
             'titulo' => 'required|string|max:255',
             'descricao' => 'required|string',
-            'arquivo' => 'required|file|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'arquivo' => 'required|file|image|mimes:jpeg,png,jpg,gif,svg|max:12288',
         ]);
 
         $noticia = Noticia::create([
@@ -85,7 +85,7 @@ class NoticiasController extends Controller
         $request->validate([
             'titulo' => 'required|string|max:255',
             'descricao' => 'required|string|max:255',
-            'arquivo' => 'required|file|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'arquivo' => 'required|file|image|mimes:jpeg,png,jpg,gif,svg|max:12288',
         ]);
 
         $noticia->titulo = $request->titulo;

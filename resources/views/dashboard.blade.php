@@ -21,7 +21,6 @@
         <a href="{{ route('noticias.index') }}" class="btn btn-secondary btn-sm">Limpar Filtros</a>
     </form>
     </div>
-
     <div class="container">
         <h1>Noticias</h1>
         <a href="{{ route('noticias.create') }}" class="btn btn-primary">Criar Noticia</a>
@@ -50,11 +49,12 @@
                             <td><a href="{{ $noticia->url }}" target="_blank">{{ $noticia->url }}</a></td>
                             <td>
                                 <form action="{{ route('noticias.destroy', $noticia->id) }}" method="post">
-                                    <a class="btn btn-info" href="{{ route('noticias.show', $noticia->id) }}">Visualizar</a>
-                                    <a class="btn btn-primary" href="{{ route('noticias.edit', $noticia->id) }}">Editar</a>
+                                    <a class="btn btn-info btn-sm" href="{{ route('noticias.show', $noticia->id) }}">Visualizar</a>
+                                    <a class="btn btn-primary btn-sm" href="{{ route('noticias.edit', $noticia->id) }}">Editar</a>
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Deletar</button>
+                                    <button type="submit" class="btn btn-danger btn-sm">Deletar</button>
+
                                 </form>
                             </td>
                         </tr>
