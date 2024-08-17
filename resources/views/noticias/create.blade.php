@@ -1,3 +1,4 @@
+@include('layouts.navigation')
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -6,7 +7,7 @@
     </x-slot>
 
     <div class="container">
-        <h1>Criar Noticia</h1>
+        <h1 class="text-center">Criar Noticia</h1>
         @if($errors->any())
         <div class="alert alert-danger">
             <ul>
