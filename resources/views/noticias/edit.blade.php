@@ -5,7 +5,7 @@
             {{ __('Criar Noticia') }}
         </h2>
     </x-slot>
-
+    <br>
     <div class="container">
         <h1 class="text-center">Editar Noticia</h1>
         @if($errors->any())
